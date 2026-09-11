@@ -1,0 +1,18 @@
+{
+  "title": "寒垠遗民",
+  "description": "又名《我从未见过海》· 未来 · 星际难民 · 生态科幻 · 第一人称",
+  "author": "佚名",
+  "language": "zh-hans",
+  "root": ".",
+  "structure": {
+    "readme": "README.md",
+    "summary": "SUMMARY.md"
+  },
+  "pluginsConfig": {
+    "fontsettings": {
+      "theme": "sepia",
+      "family": "serif",
+      "size": 3
+    }
+  }
+}

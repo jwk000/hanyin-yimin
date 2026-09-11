@@ -1,0 +1,9 @@
+# 构建产物 / 依赖
+_book/
+node_modules/
+*.log
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
