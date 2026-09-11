@@ -1,0 +1,13 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+version: 1
+site:
+  title: 寒垠遗民
+  structure:
+    - type: space
+      key: space-hanyin-yimin
+      title: 寒垠遗民
+      path: hanyin-yimin
+      default: true
+      content:
+        directory: ./
+        language: zh
