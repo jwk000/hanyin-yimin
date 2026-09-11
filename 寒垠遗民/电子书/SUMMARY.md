@@ -1,6 +1,6 @@
-# 目录
+# Table of contents
 
-* [书名页](README.md)
+* [寒垠遗民](README.md)
 
 ## 卷一 · 灰
 
