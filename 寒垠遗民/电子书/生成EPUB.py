@@ -19,7 +19,7 @@ OUTDIR = os.path.join(ROOT, "输出")
 
 BOOK_TITLE = "寒垠遗民"
 BOOK_SUBTITLE = "又名《我从未见过海》"
-BOOK_AUTHOR = "佚名"
+BOOK_AUTHOR = "jwk000"
 BOOK_DESC = "未来 · 星际难民 · 生态科幻 · 第一人称"
 
 JUAN = {"卷一": "juan1", "卷二": "juan2", "卷三": "juan3", "卷四": "juan4", "卷五": "juan5"}
