@@ -18,14 +18,14 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 OUTDIR = os.path.join(ROOT, "输出")
 
 BOOK_TITLE = "寒垠遗民"
-BOOK_SUBTITLE = "又名《我从未见过海》"
+BOOK_SUBTITLE = ""
 BOOK_AUTHOR = "jwk000"
-BOOK_DESC = "未来 · 星际难民 · 生态科幻 · 第一人称"
+BOOK_DESC = "未来 · 星际难民 · 生态科幻 · 回忆"
 
 JUAN = {"卷一": "juan1", "卷二": "juan2", "卷三": "juan3", "卷四": "juan4", "卷五": "juan5"}
 COVER_IMAGE = os.path.join(ROOT, "封面", "封面-寒垠遗民-插画版.jpg")
-VOLUME_IMAGE_DIR = os.path.join(ROOT, "插画", "电子书", "卷首")
-CHAPTER_IMAGE_DIR = os.path.join(ROOT, "插画", "电子书", "章首")
+VOLUME_IMAGE_DIR = os.path.join(ROOT, "插画",  "卷首")
+CHAPTER_IMAGE_DIR = os.path.join(ROOT, "插画",  "章首")
 
 CSS = """@charset "utf-8";
 html { font-size: 100%; }
