@@ -23,6 +23,9 @@ BOOK_AUTHOR = "jwk000"
 BOOK_DESC = "未来 · 星际难民 · 生态科幻 · 第一人称"
 
 JUAN = {"卷一": "juan1", "卷二": "juan2", "卷三": "juan3", "卷四": "juan4", "卷五": "juan5"}
+COVER_IMAGE = os.path.join(ROOT, "封面", "封面-寒垠遗民-插画版.jpg")
+VOLUME_IMAGE_DIR = os.path.join(ROOT, "插画", "电子书", "卷首")
+CHAPTER_IMAGE_DIR = os.path.join(ROOT, "插画", "电子书", "章首")
 
 CSS = """@charset "utf-8";
 html { font-size: 100%; }
@@ -46,6 +49,11 @@ a { color: #3b5c78; text-decoration: none; }
 .title-page h1 { font-size: 2.1em; letter-spacing: .18em; }
 .title-page .sub { margin-top: 1.2em; color: #555; }
 .title-page .desc { margin-top: .6em; color: #777; font-size: .92em; }
+.cover-page { text-align: center; margin: 0; padding: 0; }
+.cover-page img { max-width: 100%; max-height: 100vh; object-fit: contain; }
+figure.art { margin: 0 0 1.6em; padding: 0; text-align: center; page-break-inside: avoid; }
+figure.art img { max-width: 100%; max-height: 72vh; object-fit: contain; }
+figure.volume-art img { max-height: 78vh; }
 """
 
 PRINT_CSS = """@charset "utf-8";
@@ -59,9 +67,12 @@ blockquote { margin: 1.2em 12%; }
 blockquote p { text-indent: 0; line-height: 2; }
 .chapter { break-before: page; page-break-before: always; }
 .chapter:first-of-type { break-before: auto; page-break-before: auto; }
-.cover { text-align: center; margin-top: 30%; }
-.cover h1 { font-size: 2.2em; letter-spacing: .2em; }
-.part { break-before: page; page-break-before: always; text-align: center; margin-top: 40%; }
+.cover-page { break-after: page; page-break-after: always; text-align: center; margin: 0; padding: 0; }
+.cover-page img { max-width: 100%; max-height: 255mm; object-fit: contain; }
+.part { break-before: page; page-break-before: always; text-align: center; margin: 0; }
+.part img { max-width: 100%; max-height: 165mm; object-fit: contain; margin-bottom: 6mm; }
+.chapter-art { margin: 0 0 10mm; text-align: center; page-break-inside: avoid; }
+.chapter-art img { max-width: 100%; max-height: 125mm; object-fit: contain; }
 """
 
 
@@ -92,6 +103,17 @@ def outname(rel):
     if base in JUAN:
         return JUAN[base] + ".xhtml"
     return base + ".xhtml"
+
+
+def illustration_for(rel):
+    """返回页面使用的插画源文件路径，没有插画则返回 None。"""
+    base = os.path.basename(rel)[:-3]
+    if base in JUAN:
+        return os.path.join(VOLUME_IMAGE_DIR, "volume-%s.jpg" % base)
+    match = re.fullmatch(r"ch(\d+)", base)
+    if match:
+        return os.path.join(CHAPTER_IMAGE_DIR, "chapter-%s.jpg" % match.group(1))
+    return None
 
 
 def inline(text, link_map):
@@ -159,9 +181,22 @@ def main():
     os.makedirs(OUTDIR, exist_ok=True)
 
     docs = []          # (outname, title, part, xhtml)
+    image_assets = []
     for part, title, rel in pages:
         src = os.path.join(ROOT, rel.replace("/", os.sep))
         body = md_to_body(read_text(src), link_map)
+        art_path = illustration_for(rel)
+        if art_path:
+            if not os.path.exists(art_path):
+                raise SystemExit("缺少插画：%s" % art_path)
+            art_name = "art-" + os.path.basename(art_path)
+            figure_class = "volume-art" if os.path.basename(rel)[:-3] in JUAN else "chapter-art"
+            body = (
+                '<figure class="art %s"><img src="images/%s" alt="%s"/></figure>\n%s'
+                % (figure_class, html.escape(art_name, quote=True),
+                   html.escape(title, quote=True), body)
+            )
+            image_assets.append((art_name, art_path))
         if os.path.basename(rel).lower() == "readme":
             head = ('<div class="title-page"><h1>%s</h1>'
                     '<p class="sub noindent">%s</p>'
@@ -173,12 +208,33 @@ def main():
     uid = "urn:uuid:" + str(uuid.uuid4())
     stamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
 
+    if not os.path.exists(COVER_IMAGE):
+        raise SystemExit("缺少封面：%s" % COVER_IMAGE)
+
     # ---------- EPUB ----------
     manifest, spine, nav_items = [], [], []
+    cover_doc = xhtml_doc(
+        "封面",
+        '<div class="cover-page"><img src="cover-art.jpg" alt="%s"/></div>'
+        % html.escape(BOOK_TITLE, quote=True),
+    )
+    manifest.append(
+        '<item id="cover" href="cover.xhtml" media-type="application/xhtml+xml"/>'
+    )
+    manifest.append(
+        '<item id="cover-image" href="cover-art.jpg" media-type="image/jpeg" '
+        'properties="cover-image"/>'
+    )
+    spine.append('<itemref idref="cover"/>')
     for i, (name, title, part, _) in enumerate(docs):
         manifest.append('<item id="p%d" href="%s" media-type="application/xhtml+xml"/>' % (i, name))
         spine.append('<itemref idref="p%d"/>' % i)
         nav_items.append((part, title, name))
+    for i, (name, _) in enumerate(image_assets):
+        manifest.append(
+            '<item id="img%d" href="images/%s" media-type="image/jpeg"/>'
+            % (i, html.escape(name, quote=True))
+        )
     manifest.append('<item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>')
     manifest.append('<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>')
     manifest.append('<item id="css" href="style.css" media-type="text/css"/>')
@@ -192,6 +248,7 @@ def main():
         '<dc:creator>%s</dc:creator>\n'
         '<dc:language>zh</dc:language>\n'
         '<dc:description>%s</dc:description>\n'
+        '<meta name="cover" content="cover-image"/>\n'
         '<meta property="dcterms:modified">%s</meta>\n'
         '</metadata>\n<manifest>\n%s\n</manifest>\n<spine toc="ncx">\n%s\n</spine>\n</package>\n'
         % (uid, BOOK_TITLE, BOOK_AUTHOR, html.escape(BOOK_DESC, quote=False), stamp,
@@ -255,20 +312,44 @@ def main():
         zf.writestr("OEBPS/nav.xhtml", xhtml_doc("目录", "\n".join(nav_body)), zipfile.ZIP_DEFLATED)
         zf.writestr("OEBPS/toc.ncx", ncx, zipfile.ZIP_DEFLATED)
         zf.writestr("OEBPS/style.css", CSS, zipfile.ZIP_DEFLATED)
+        zf.write(COVER_IMAGE, "OEBPS/cover-art.jpg")
+        for name, path in image_assets:
+            zf.write(path, "OEBPS/images/" + name)
         for name, _, _, doc in docs:
             zf.writestr("OEBPS/" + name, doc, zipfile.ZIP_DEFLATED)
+        zf.writestr("OEBPS/cover.xhtml", cover_doc, zipfile.ZIP_DEFLATED)
 
     # ---------- 打印版 HTML（给 Chrome 出 PDF 用） ----------
-    blocks = ['<div class="cover"><h1>%s</h1><p>%s</p><p>%s</p></div>'
-              % (BOOK_TITLE, BOOK_SUBTITLE, BOOK_DESC)]
-    last_part = "__none__"
+    cover_src = html.escape(os.path.relpath(COVER_IMAGE, OUTDIR), quote=True)
+    blocks = ['<div class="cover-page"><img src="%s" alt="%s"/></div>'
+              % (cover_src, html.escape(BOOK_TITLE, quote=True))]
     for name, title, part, _ in docs:
-        if os.path.basename(name).startswith(("readme", "juan")):
+        base = os.path.basename(name)
+        if base.startswith(("readme", "juan")):
             if name.startswith("juan"):
-                blocks.append('<div class="part"><h1>%s</h1></div>' % html.escape(title, quote=False))
+                volume = title.split(" · ", 1)[0]
+                volume_src = html.escape(
+                    os.path.relpath(
+                        os.path.join(VOLUME_IMAGE_DIR, "volume-%s.jpg" % volume),
+                        OUTDIR,
+                    ),
+                    quote=True,
+                )
+                blocks.append(
+                    '<div class="part"><img src="%s" alt="%s"/><h1>%s</h1></div>'
+                    % (volume_src, html.escape(title, quote=True),
+                       html.escape(title, quote=False))
+                )
             continue
-        blocks.append('<div class="chapter">%s</div>'
-                      % md_to_body(read_text(os.path.join(ROOT, "正文", name.replace(".xhtml", ".md"))), link_map))
+        chapter_source = os.path.join(ROOT, "正文", name.replace(".xhtml", ".md"))
+        chapter_body = md_to_body(read_text(chapter_source), link_map)
+        art_path = illustration_for(chapter_source)
+        art_html = ""
+        if art_path:
+            art_src = html.escape(os.path.relpath(art_path, OUTDIR), quote=True)
+            art_html = '<figure class="chapter-art"><img src="%s" alt="%s"/></figure>' % (
+                art_src, html.escape(title, quote=True))
+        blocks.append('<div class="chapter">%s%s</div>' % (art_html, chapter_body))
     print_html = (
         '<!DOCTYPE html>\n<html lang="zh">\n<head>\n<meta charset="utf-8"/>\n<title>%s</title>\n'
         "<style>%s</style>\n</head>\n<body>\n%s\n</body>\n</html>\n"

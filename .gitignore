@@ -1,9 +1,11 @@
 # 构建产物 / 依赖
 _book/
 node_modules/
+__pycache__/
 *.log
 
 # 系统文件
 .DS_Store
 Thumbs.db
 desktop.ini
+长视频制作

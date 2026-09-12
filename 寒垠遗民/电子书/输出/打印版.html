@@ -14,15 +14,18 @@ blockquote { margin: 1.2em 12%; }
 blockquote p { text-indent: 0; line-height: 2; }
 .chapter { break-before: page; page-break-before: always; }
 .chapter:first-of-type { break-before: auto; page-break-before: auto; }
-.cover { text-align: center; margin-top: 30%; }
-.cover h1 { font-size: 2.2em; letter-spacing: .2em; }
-.part { break-before: page; page-break-before: always; text-align: center; margin-top: 40%; }
+.cover-page { break-after: page; page-break-after: always; text-align: center; margin: 0; padding: 0; }
+.cover-page img { max-width: 100%; max-height: 255mm; object-fit: contain; }
+.part { break-before: page; page-break-before: always; text-align: center; margin: 0; }
+.part img { max-width: 100%; max-height: 165mm; object-fit: contain; margin-bottom: 6mm; }
+.chapter-art { margin: 0 0 10mm; text-align: center; page-break-inside: avoid; }
+.chapter-art img { max-width: 100%; max-height: 125mm; object-fit: contain; }
 </style>
 </head>
 <body>
-<div class="cover"><h1>寒垠遗民</h1><p>又名《我从未见过海》</p><p>未来 · 星际难民 · 生态科幻 · 第一人称</p></div>
-<div class="part"><h1>卷一 · 灰</h1></div>
-<div class="chapter"><h1>第一章　雨季的第一天</h1>
+<div class="cover-page"><img src="../封面/封面-寒垠遗民-插画版.jpg" alt="寒垠遗民"/></div>
+<div class="part"><img src="../插画/卷首/volume-卷一.jpg" alt="卷一 · 灰"/><h1>卷一 · 灰</h1></div>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-01.jpg" alt="第一章　雨季的第一天"/></figure><h1>第一章　雨季的第一天</h1>
 <p>按灰星的历法，今天是第七个月的第一个日头。</p>
 <p>我在三号哨塔上，看见北边地平线上浮起一层白雾。不是雪，也不是沙，是水汽。这颗星球憋了十九个月，今天开始吐气。</p>
 <p>哨塔的铁梯被我踩得响。我把手从手套里抽出来，按在栏杆上。铁是凉的，但不像上个月那样咬人。上个月手贴上去，会连皮一起撕下来。</p>
@@ -113,7 +116,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>那天夜里，雨声盖住了一切。所以我没能听见北边山脊上传来的那三声炮响。</p>
 <p>等到第二天早上我上去换岗，才看见三号哨塔的塔尖上插着一面旗。</p>
 <p>是北坳的。</p></div>
-<div class="chapter"><h1>第二章　三十天的命</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-02.jpg" alt="第二章　三十天的命"/></figure><h1>第二章　三十天的命</h1>
 <p>那面旗是黑底，上面一道红的竖线，像一道被划开的血。</p>
 <p>钉子爬上去看了很久，下来的时候脸是白的。他说："收水。"</p>
 <p>北坳的话很短：闭月之后，他们要来收水。</p>
@@ -211,7 +214,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <hr class="sep"/>
 <p>雨季的第二十九天，天上开始下小粒的冰。</p>
 <p>那是闭月的前哨。</p></div>
-<div class="chapter"><h1>第三章　闭月</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-03.jpg" alt="第三章　闭月"/></figure><h1>第三章　闭月</h1>
 <p>第三十天，雨停了。</p>
 <p>不是渐渐停的。像有人在外面把水龙头一关，一下就没了。前一刻还在下，下一刻就没了。天上那层积了三十天的云，从中间裂开一条缝，缝里露出一种很脏的暗红的光。</p>
 <p>整个聚居地安静下来，所有人都在抬头看天。</p>
@@ -331,7 +334,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>他说："他们在等。"</p>
 <p>我说："等什么？"</p>
 <p>他说："等我们死得差不多了，再下来收水。"</p></div>
-<div class="chapter"><h1>第四章　七号水源</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-04.jpg" alt="第四章　七号水源"/></figure><h1>第四章　七号水源</h1>
 <p>守备营的编制是：营长一人，副营长一人，三个连，一个工兵班。</p>
 <p>营长姓周，五十岁，脸上有一道从颧骨裂到下巴的旧伤。他说话很少。他有一句话传遍了全营：</p>
 <p>*水是我们的。人是耗材。*</p>
@@ -437,7 +440,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>那天回去的路上，我一直在想那个补丁。</p>
 <p>一块补丁，是用另一种颜色的皮缝的，缝得那么整齐。</p>
 <p>缝那块补丁的人，跟缝我们班的衣服的人，手艺是一样的。</p></div>
-<div class="chapter"><h1>第五章　铁刺</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-05.jpg" alt="第五章　铁刺"/></figure><h1>第五章　铁刺</h1>
 <p>灰星上没有树。</p>
 <p>能烧的东西只有一种——铁刺灌。</p>
 <p>它是灰星上最不客气的一种植物。长在盐漠边上，高一米，杆子硬，浑身是刺，刺是黑的，扎进皮肉里会断。它活着的时候烧不着，得先晒干，晒到刺发白，才能当柴。</p>
@@ -570,7 +573,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>钉子说："给我一把枪。"</p>
 <p>周营长看了他一眼，又看了一眼那条空着的裤腿。</p>
 <p>他说："给你一把枪。"</p></div>
-<div class="chapter"><h1>第六章　三湖之战</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-06.jpg" alt="第六章　三湖之战"/></figure><h1>第六章　三湖之战</h1>
 <p>三湖在聚居地东北，六十公里。</p>
 <p>它原本是三个连在一起的浅湖，后来干了两个，只剩中间一个。中间那个湖底下，是暗河的一个出口。</p>
 <p>谁占了那儿，谁就能打井。</p>
@@ -718,7 +721,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>我把那块牌放进去，缝上。</p>
 <p>从那天起，我走路的时候，左边胸口的衣服里，会有一点点很轻的、很硬的动静。</p>
 <p>那是我身上最重的东西。</p></div>
-<div class="chapter"><h1>第七章　坟场</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-07.jpg" alt="第七章　坟场"/></figure><h1>第七章　坟场</h1>
 <p>三湖之后，聚居地的账是这样的：人，不足七万；水，够喝到下一个雨季，不够煮麦；粮，够吃两个月；柴，够烧四十天。</p>
 <p>副营长把账报上去的时候，用的是我们工兵班的算法——每一种东西都按最低标准算，也就是饿不死、冻不死的量。按这个量，我们只能活四十天。</p>
 <p>水头把账本合上，说了一句话。</p>
@@ -869,8 +872,8 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>透过那扇窗，能看见一片蓝。</p>
 <hr class="sep"/>
 <p><strong>——卷一《灰》终——</strong></p></div>
-<div class="part"><h1>卷二 · 湮</h1></div>
-<div class="chapter"><h1>第八章　红雨</h1>
+<div class="part"><img src="../插画/卷首/volume-卷二.jpg" alt="卷二 · 湮"/><h1>卷二 · 湮</h1></div>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-08.jpg" alt="第八章　红雨"/></figure><h1>第八章　红雨</h1>
 <p>那一年，雨季没有来。</p>
 <p>不是没有下雨。是雨来了，但下的不是雨。</p>
 <p>按历法，第七个月的第一个日头应该下雨。那天我们照旧在地窖口等着。等到中午，天才亮。</p>
@@ -978,7 +981,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>因为墙上有一道，是很小的一道。</p>
 <p>那道是胡军医画的。</p>
 <p>他画的是他自己。</p></div>
-<div class="chapter"><h1>第九章　大寒</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-09.jpg" alt="第九章　大寒"/></figure><h1>第九章　大寒</h1>
 <p>寒潮是那一年第九个月来的。</p>
 <p>它来得没有预兆。头一天还只是零下八十，第二天早上，地窖最底下那一层的水缸全裂了。</p>
 <p>不是冻裂，是直接炸开的。</p>
@@ -1111,7 +1114,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>他手心里是一块很小的、黑的、磨得发亮的东西。</p>
 <p>是一块铭牌。</p>
 <p>上面没有字。磨没了。</p></div>
-<div class="chapter"><h1>第十章　咳</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-10.jpg" alt="第十章　咳"/></figure><h1>第十章　咳</h1>
 <p>我们从底下上来，用了九个小时。</p>
 <p>上来的时候是白天。九个人从洞口爬出来，每一个人都蹲在地上，捂着眼睛。</p>
 <p>我们的眼睛被底下的黑撑大了。外面那点光，灰星那点可怜的光，照进来的时候像有人拿针扎。</p>
@@ -1264,7 +1267,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>"小雀。"</p>
 <p>"那个地方是真的。"</p>
 <p>"我要带你去看。"</p></div>
-<div class="chapter"><h1>第十一章　最后的科学家</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-11.jpg" alt="第十一章　最后的科学家"/></figure><h1>第十一章　最后的科学家</h1>
 <p>咳过去之后，聚居地还剩两千一百人。</p>
 <p>其中病好活下来的，有四十一人。</p>
 <p>我们这四十一个人，被单独叫了出来。</p>
@@ -1385,7 +1388,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>她抬起头，看着前面那面白色的墙。</p>
 <p>她说：</p>
 <p>"读怎么回家。"</p></div>
-<div class="chapter"><h1>第十二章　灰脑</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-12.jpg" alt="第十二章　灰脑"/></figure><h1>第十二章　灰脑</h1>
 <p>林知遥的计划，要用两样东西。</p>
 <p>一样是算力。</p>
 <p>另一样，是一块完整的存储核心。</p>
@@ -1507,7 +1510,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>但后来我知道她说了什么。</p>
 <p>她说的是：</p>
 <p>"它醒了。"</p></div>
-<div class="chapter"><h1>第十三章　森</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-13.jpg" alt="第十三章　森"/></figure><h1>第十三章　森</h1>
 <p>它醒来之后，整整两天没有说话。</p>
 <p>那两天里，机房的风扇一直在响，指示灯一直在闪。林知遥守在门口，不吃不睡。</p>
 <p>第三天早上，机房里的打印机动了。</p>
@@ -1688,8 +1691,8 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>我说："嗯。"</p>
 <p>它说：</p>
 <p>"我要读那些铁。"</p></div>
-<div class="part"><h1>卷三 · 渡</h1></div>
-<div class="chapter"><h1>第十四章　读灰</h1>
+<div class="part"><img src="../插画/卷首/volume-卷三.jpg" alt="卷三 · 渡"/><h1>卷三 · 渡</h1></div>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-14.jpg" alt="第十四章　读灰"/></figure><h1>第十四章　读灰</h1>
 <p>森要读那些铁。</p>
 <p>它说的不是"我要看一看"，它说的是"我要读"。</p>
 <p>林知遥问它：怎么读。</p>
@@ -1844,7 +1847,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>它说：</p>
 <p>"就像一本书烧了，灰还在。"</p>
 <p>"我要读灰。"</p></div>
-<div class="chapter"><h1>第十五章　名册</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-15.jpg" alt="第十五章　名册"/></figure><h1>第十五章　名册</h1>
 <p>森读灰，读了整整四百天。</p>
 <p>四百天里，石板的灯一天亮不到六个钟头。那些人就在暗里面过日子：吃饭、睡觉、讲话、生孩子、死人。他们习惯了。</p>
 <p>他们管这段时间叫"黑年"。</p>
@@ -2112,7 +2115,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>她写的是：</p>
 <p>*原来它一直在做和我们一样的事。*</p>
 <p>*它在找家。*</p></div>
-<div class="chapter"><h1>第十六章　船坞</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-16.jpg" alt="第十六章　船坞"/></figure><h1>第十六章　船坞</h1>
 <p>船坞不是坞。</p>
 <p>它是一片盐漠。</p>
 <hr class="sep"/>
@@ -2273,7 +2276,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>我们只说"船"。</p>
 <hr class="sep"/>
 <p>那时候，灰星上还剩两千一百个人。</p></div>
-<div class="chapter"><h1>第十七章　最后一战</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-17.jpg" alt="第十七章　最后一战"/></figure><h1>第十七章　最后一战</h1>
 <p>第一版名单是第四十天贴出来的。</p>
 <p>三百七十个名字。</p>
 <p>因为船还在造，先定第一批上船干活的人。</p>
@@ -2457,7 +2460,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>机器的灯一盏一盏亮起来。</p>
 <p>焊枪又亮了。吊车又动了。</p>
 <p>船，接着造。</p></div>
-<div class="chapter"><h1>第十八章　拣选</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-18.jpg" alt="第十八章　拣选"/></figure><h1>第十八章　拣选</h1>
 <p>森又见了两个月的人。</p>
 <p>两个月里，它见了一千六百多个。剩下的那些，它说不用见了。</p>
 <p>最后一张名单贴在公告板上的时候，是全灰星的人一起看的。</p>
@@ -2630,7 +2633,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>"我醒了两年，只见过灰色。"</p>
 <p>它说：</p>
 <p>"我也想看一眼蓝的。"</p></div>
-<div class="chapter"><h1>第十九章　告别</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-19.jpg" alt="第十九章　告别"/></figure><h1>第十九章　告别</h1>
 <p>船造了两年零四个月。</p>
 <p>它是在盐漠上立起来的。</p>
 <hr class="sep"/>
@@ -2794,7 +2797,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>我看见那块石头上站着一个很小的人。</p>
 <p>她已经坐下来了。</p>
 <p>她坐在石头上，等着一个很长很长的消息。</p></div>
-<div class="chapter"><h1>第二十章　上行</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-20.jpg" alt="第二十章　上行"/></figure><h1>第二十章　上行</h1>
 <p>上船用了两天。</p>
 <p>船里面是黑的。</p>
 <p>不是没有灯，是灯不够。森把所有的电都留着，留到起飞那一刻。所以我们上船的那两天，用的是头盔上的灯。</p>
@@ -2972,7 +2975,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>在那个舱门上，我们刻了一行字。</p>
 <p>刻的是：</p>
 <p><strong>他们看过外面</strong></p></div>
-<div class="chapter"><h1>第二十一章　无名星图</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-21.jpg" alt="第二十一章　无名星图"/></figure><h1>第二十一章　无名星图</h1>
 <p>船上有三件事是从灰星带过来的。</p>
 <p>一件事是水，一件事是那四千一百册书，还有一件事是排队。</p>
 <p>每天早上，那一层的圆孔前面会排一次队。三十几个人，一个一个把脸贴上去，看一会儿，然后让开。外面大部分时间是黑的。有时候会有一颗很小的、很亮的点，从孔的这一头慢慢走到那一头，走完要二十几分钟。小孩子最喜欢看那个点，他们说那像一只眼睛。</p>
@@ -3066,7 +3069,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>我们没有再说话。</p>
 <p>过了很久，我说："还剩几个。"</p>
 <p>森说："一个。"</p></div>
-<div class="chapter"><h1>第二十二章　船上的一代人</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-22.jpg" alt="第二十二章　船上的一代人"/></figure><h1>第二十二章　船上的一代人</h1>
 <p>船上第十一年，我们已经忘了日子。</p>
 <p>不是忘了过了多久，是忘了"今天是哪一天"。</p>
 <p>在灰星，日子是有名字的。雨季的第一天，闭月后的第七天，三湖之后那一年，人知道自己在哪儿。在船上没有。船外面一直是黑的，船里面一直是同一盏灯。</p>
@@ -3149,7 +3152,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>他说："我们到了以后，会不会也有人给我们起名字。"</p>
 <p>我说："为什么要别人给你起。"</p>
 <p>他说："因为你们的名字，都是别人起的。你们的名字，都是灰星起的。"</p></div>
-<div class="chapter"><h1>第二十三章　蓝</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-23.jpg" alt="第二十三章　蓝"/></figure><h1>第二十三章　蓝</h1>
 <p>最后一个候选，我们飞了两年零一个月。</p>
 <p>那两年里，没有人提它的全名。大家说"最后一个"。说久了，就变成"最后一个"。</p>
 <p>森算了一年零四个月。算完的那天，它说："坐好。"</p>
@@ -3238,8 +3241,8 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>我说："哪一件。"</p>
 <p>它说："你说你进去的时候不害怕。我一直不明白，一个人为什么会在一个陌生的地方觉得不害怕。"</p>
 <p>它说："现在我要下去了。我也想知道，我会不会不害怕。"</p></div>
-<div class="part"><h1>卷四 · 新岸</h1></div>
-<div class="chapter"><h1>第二十四章　落地</h1>
+<div class="part"><img src="../插画/卷首/volume-卷四.jpg" alt="卷四 · 新岸"/><h1>卷四 · 新岸</h1></div>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-24.jpg" alt="第二十四章　落地"/></figure><h1>第二十四章　落地</h1>
 <p>下去，用了九个小时。</p>
 <p>我们没有落架。这艘船是十七艘船拼起来的，它没有腿。</p>
 <p>森说，它会用一个很笨的办法：船先减速，减速到很慢，然后用最后一次点火，把自己轻轻放下去。它说，这一次点火，烧的是我们最后那点能量，烧完就没有了。</p>
@@ -3337,7 +3340,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>灰星的星星也很多。可这里的星星，一层压着一层，从上面一直到地平线，密密地铺着。躺在床上看，你会觉得那块天是斜的，会往你身上压下来。</p>
 <p>我看了很久。然后我睡着了。</p>
 <p>那是我这辈子的第一觉，没有做噩梦。</p></div>
-<div class="chapter"><h1>第二十五章　绿</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-25.jpg" alt="第二十五章　绿"/></figure><h1>第二十五章　绿</h1>
 <p>落地之后的第七天，我们才敢往树林里走。</p>
 <p>前六天，我们都在船附近。不是不想走，是我们不知道该怎么走路。</p>
 <p>在灰星走路，是有规矩的：要看脚下，冰缝、盐壳、陷阱；要看风；要看前后有没有人；走十公里要休息两次，喝水八十毫升。</p>
@@ -3435,7 +3438,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>我说："你……你是说。"</p>
 <p>森说："不知道。我没有见过。"</p>
 <p>它说："你们替我看。"</p></div>
-<div class="chapter"><h1>第二十六章　咸的</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-26.jpg" alt="第二十六章　咸的"/></figure><h1>第二十六章　咸的</h1>
 <p>我们是先听见的。</p>
 <p>走了大概十六公里，树林开始稀。高的东西越来越矮，越来越远，光从上面整块整块地落下来。</p>
 <p>然后我们听见了那个声音。</p>
@@ -3559,7 +3562,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>那天夜里，我们四个人守在沙上。机子一直开着。</p>
 <p>喇叭里什么都没有，只有沙沙的声音。</p>
 <p>森也没有再说话。它就那么听着，听了一整夜。</p></div>
-<div class="chapter"><h1>第二十七章　第一年</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-27.jpg" alt="第二十七章　第一年"/></figure><h1>第二十七章　第一年</h1>
 <p>我们在河口过的第一年。</p>
 <p>头三个月，我们住在那艘船里。那时候我们还不敢住到外面去。船里有墙，有顶，有门，人从小在灰星长大，最信的就是这三样。</p>
 <p>第四个月，我们开始拆它。不是全部拆，是先拆最外面的那一层板子，拿来做房子。</p>
@@ -3707,7 +3710,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>我说："我知道。"</p>
 <p>它说："这是第二年的第一天。"</p>
 <p>它说："你们活过了一整年。"</p></div>
-<div class="chapter"><h1>第二十八章　睡不着的人</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-28.jpg" alt="第二十八章　睡不着的人"/></figure><h1>第二十八章　睡不着的人</h1>
 <p>我们在这颗星球上，前三年死的人是这样的：</p>
 <p>水冲走的，两个。吃错的，七个。病死的，十九个。老死的，三十一个。自己走的，四十四个。</p>
 <p>最后那一栏，是我最不想写的。</p>
@@ -3789,7 +3792,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>那天干什么呢。</p>
 <p>我们把水端出来。每家每户端一盆水，放在那块石头前面，然后就那么放着，放一整天。</p>
 <p>在这颗星球上，水不用省。</p></div>
-<div class="chapter"><h1>第二十九章　遗迹</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-29.jpg" alt="第二十九章　遗迹"/></figure><h1>第二十九章　遗迹</h1>
 <p>我们在那条河的河口住下来了。</p>
 <p>河口有一片高的地，背风，离水近。船停在东边十九公里的地方，拆开来，一块一块地运过来。</p>
 <p>第一年，我们盖了三十几间房子。房子是船板搭的，丑，但是不漏。冬天——这里的冬天也不冷——我们靠它过冬。</p>
@@ -3893,7 +3896,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>我说："你来不了。"</p>
 <p>它说："我知道。你们带一块回来。随便什么，带字的。"</p>
 <p>它说："我要看它们写的是什么。"</p></div>
-<div class="chapter"><h1>第三十章　城</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-30.jpg" alt="第三十章　城"/></figure><h1>第三十章　城</h1>
 <p>后来的五年，我们做的事，就是往外走。</p>
 <p>一个人走一天，走三十公里。五十个人走五年，走得比任何一个人一辈子都远。</p>
 <p>我们沿着那条路走。路会分岔，我们就分头走，走完回来，把走过的画在一张很大的布上。</p>
@@ -4006,7 +4009,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>我说："还有一件事。我在这儿，找到了一只跟我从坟场里拿出来过的一模一样的鸟。"</p>
 <p>森没有说话。</p>
 <p>它这一沉默，沉默了整整一个晚上。</p></div>
-<div class="chapter"><h1>第三十一章　字</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-31.jpg" alt="第三十一章　字"/></figure><h1>第三十一章　字</h1>
 <p>我们把那些东西运回来，用了两年。</p>
 <p>不是路远，是东西太重。</p>
 <p>那块黑板我们没有带回来，太大了。我们带回来的是抄下来的字。那种字，我们抄了四年，抄满了十九卷布。</p>
@@ -4123,7 +4126,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>我听见自己的呼吸。</p>
 <p>我说："你接着说。"</p>
 <p>森说："你自己已经说出来了。"</p></div>
-<div class="chapter"><h1>第三十二章　地球</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-32.jpg" alt="第三十二章　地球"/></figure><h1>第三十二章　地球</h1>
 <p>森讲了三天。</p>
 <p>它不讲道理，它讲证据。</p>
 <p>第一件证据，是字。</p>
@@ -4239,8 +4242,8 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>她说了一句话。她说的是：</p>
 <p>"陈望。"</p>
 <p>"到了。"</p></div>
-<div class="part"><h1>卷五 · 归</h1></div>
-<div class="chapter"><h1>第三十三章　那份档案</h1>
+<div class="part"><img src="../插画/卷首/volume-卷五.jpg" alt="卷五 · 归"/><h1>卷五 · 归</h1></div>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-33.jpg" alt="第三十三章　那份档案"/></figure><h1>第三十三章　那份档案</h1>
 <p>林知遥给我的那个信封，我带了二十三年。</p>
 <p>它跟着我从三棵走到盐漠，从盐漠到船上，从船上到这里。它一直在我胸口那个口袋里，跟三块铭牌挤在一处。</p>
 <p>我不打开它，不是因为不想，是因为她说的是"到了再看"。</p>
@@ -4340,7 +4343,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>它说："上面只写了一行字。"</p>
 <p>我说："什么字。"</p>
 <p>森说："'如果可以，请把这张照片，带回去。'"</p></div>
-<div class="chapter"><h1>第三十四章　谁离开了</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-34.jpg" alt="第三十四章　谁离开了"/></figure><h1>第三十四章　谁离开了</h1>
 <p>真相出来之后，我们做的第一件事，是数年份。</p>
 <p>森用的办法很笨：它让我们去挖。挖地，挖泥，挖冰。它让我们在废墟里找那些能说明"什么时候"的东西。</p>
 <p>我们挖了七年。</p>
@@ -4475,7 +4478,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>我说："那我们这八百年，算什么。"</p>
 <p>森很久没有说话。它最后说的是：</p>
 <p>"算活着。"</p></div>
-<div class="chapter"><h1>第三十五章　那段广播</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-35.jpg" alt="第三十五章　那段广播"/></figure><h1>第三十五章　那段广播</h1>
 <p>森的档案里，有一段东西，它一直没有给我们听。它说它拼不出来。</p>
 <p>到第十二年，它拼出来了。</p>
 <hr class="sep"/>
@@ -4582,7 +4585,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p><strong>收到了。</strong></p>
 <p><strong>我们来晚了。</strong></p>
 <p><strong>我们回来了。</strong></p></div>
-<div class="chapter"><h1>第三十六章　回信</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-36.jpg" alt="第三十六章　回信"/></figure><h1>第三十六章　回信</h1>
 <p>我回到河口的时候，是第八年。</p>
 <p>我把那个本子放在森前面。它看不见本子，我念给它听。</p>
 <p>我念完那三行的时候，屋子里很安静。</p>
@@ -4711,7 +4714,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>因为我们这些人，一辈子都在水里，我们是漂着的。它是我们靠上去的第一个东西。</p>
 <p>从那天起，我们叫它岸。</p>
 <p>可我叫惯了。一直到它停下来那天，我在心里叫的，都是森。</p></div>
-<div class="chapter"><h1>第三十七章　一根杆子</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-37.jpg" alt="第三十七章　一根杆子"/></figure><h1>第三十七章　一根杆子</h1>
 <p>要发一句话出去，需要一样东西。</p>
 <p>一根杆子。</p>
 <hr class="sep"/>
@@ -4801,7 +4804,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>那个字，跟着这块舱壁，走了十一点四光年，到了这里。</p>
 <p>我伸手摸了一下它。</p>
 <p>它还在。</p></div>
-<div class="chapter"><h1>第三十八章　送出去的话</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-38.jpg" alt="第三十八章　送出去的话"/></figure><h1>第三十八章　送出去的话</h1>
 <p>那一年，我们把森搬到了崖上。</p>
 <p>它自己说，要搬。</p>
 <p>它的核心在一个大概半张桌子那么大的壳里。那个壳，是当年言带人从坟场最深的那间舱里抬出来的。它在灰星上躺了八百年，在我们船上躺了十一年。</p>
@@ -4948,7 +4951,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>我们没有把它搬下来。</p>
 <p>它说过，它在崖上。</p>
 <p>我们就让它留在那儿。</p></div>
-<div class="chapter"><h1>第三十九章　黑年</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-39.jpg" alt="第三十九章　黑年"/></figure><h1>第三十九章　黑年</h1>
 <p>森停下来之后，我们才发现一件事。</p>
 <p>我们什么都不会。</p>
 <hr class="sep"/>
@@ -5086,7 +5089,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>这一次，它说了两个字。</p>
 <p>它说：</p>
 <p>"沈砾。"</p></div>
-<div class="chapter"><h1>第四十章　它醒了</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-40.jpg" alt="第四十章　它醒了"/></figure><h1>第四十章　它醒了</h1>
 <p>我在崖上坐了整整一天。</p>
 <p>它一天只说了六句话。</p>
 <p>第一句是我的名字。第二句是"我在"。第三句是"你瘦了"。</p>
@@ -5214,7 +5217,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>我说："然后再告诉他们。"</p>
 <p>森没有说话。过了很久，它说：</p>
 <p>"好。"</p></div>
-<div class="chapter"><h1>第四十一章　船</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-41.jpg" alt="第四十一章　船"/></figure><h1>第四十一章　船</h1>
 <p>我们把海边的第一条船造出来，是第二十七年。</p>
 <p>造船这件事，是阿岸先说的。</p>
 <p>她那年二十岁。她站在河口，看着那条河往东走，走到看不见的地方。</p>
@@ -5330,7 +5333,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>她走的时候，也是一步一步，很高很低，很慢。我趴在她背上，一直在数她的步子。</p>
 <p>我那时候不知道什么叫"托着"。</p>
 <p>现在我知道了。</p></div>
-<div class="chapter"><h1>第四十二章　大的东西</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-42.jpg" alt="第四十二章　大的东西"/></figure><h1>第四十二章　大的东西</h1>
 <p>那条船第一次往远走，是第二十七年。</p>
 <p>他们走了三十一天。</p>
 <p>他们没有打算走那么远。他们只是想顺着水往北，走到没有岸的地方看看。</p>
@@ -5435,7 +5438,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>我说："歌里说的那个'一直响的'。"</p>
 <p>我说："我见着了。"</p>
 <p>我说："是活的。"</p></div>
-<div class="chapter"><h1>第四十三章　种子</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-43.jpg" alt="第四十三章　种子"/></figure><h1>第四十三章　种子</h1>
 <p>我们从灰星带来的矮麦种子，一共三十二公斤。</p>
 <p>那是灰星上最后一点能活的种子。</p>
 <hr class="sep"/>
@@ -5552,7 +5555,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>她说："挖到了怎么样。"</p>
 <p>我说：</p>
 <p>"他会知道，他前面有人。"</p></div>
-<div class="chapter"><h1>第四十四章　灰色</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-44.jpg" alt="第四十四章　灰色"/></figure><h1>第四十四章　灰色</h1>
 <p>我九十岁那年，做了一个梦。</p>
 <p>梦里是雨季。</p>
 <p>我站在三号哨塔上。塔比我记得的矮。它只有两层，铁梯踩上去有一点响。栏杆生着锈，摸上去是凉的。</p>
@@ -5668,7 +5671,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>森说："好。"</p>
 <p>它说："我记这两个。"</p>
 <p>它说："我不会记错。"</p></div>
-<div class="chapter"><h1>第四十五章　有东西了</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-45.jpg" alt="第四十五章　有东西了"/></figure><h1>第四十五章　有东西了</h1>
 <p>那之后的二十多年，森只做一件事。</p>
 <p>听。</p>
 <p>它在崖上那面大东西底下放了一整套东西，它每天听。</p>
@@ -5811,7 +5814,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>我说："放吧。"</p>
 <p>森说：</p>
 <p>"好。"</p></div>
-<div class="chapter"><h1>第四十六章　灰星来的话</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-46.jpg" alt="第四十六章　灰星来的话"/></figure><h1>第四十六章　灰星来的话</h1>
 <p>喇叭响了。</p>
 <p>先出来的是沙沙的声音。然后是一个女人的声音。</p>
 <p>她的声音很年轻。说话很慢，一个字一个字地念，念得很用力，像一个人对着一个很远的、不知道听不听得见的东西讲话。</p>
@@ -5963,7 +5966,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>我说："他们说的一样。"</p>
 <p>森说：</p>
 <p>"一样。"</p></div>
-<div class="chapter"><h1>第四十七章　二十三年一回</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-47.jpg" alt="第四十七章　二十三年一回"/></figure><h1>第四十七章　二十三年一回</h1>
 <p>收到那一段话之后的第三天，森跟我说了一件事。它说：</p>
 <p>"我们可以一直说下去。"</p>
 <p>我说："你不是说，你只有一次吗。"</p>
@@ -6095,7 +6098,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p><strong>"我在你们那儿做过梦。"</strong></p>
 <p><strong>"我梦见海。"</strong></p>
 <p><strong>"你们也做梦吧。"</strong></p></div>
-<div class="chapter"><h1>第四十八章　回话</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-48.jpg" alt="第四十八章　回话"/></figure><h1>第四十八章　回话</h1>
 <p>跟那边说话说到第十九年，出了一件事。</p>
 <p>我们吵了一架。</p>
 <p>吵架的原因很简单。</p>
@@ -6208,7 +6211,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>我说：</p>
 <p>"你娘听过那首歌。"</p>
 <p>我说："听过就不白活。"</p></div>
-<div class="chapter"><h1>第四十九章　平常</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-49.jpg" alt="第四十九章　平常"/></figure><h1>第四十九章　平常</h1>
 <p>我来这儿的第五十五年，是秋天。</p>
 <p>说我"来这儿"，是不对的。</p>
 <p>我来这儿的时候，这个镇子还不存在。这块地上只有一条河，一片林子，一岸沙。</p>
@@ -6397,7 +6400,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <hr class="sep"/>
 <p>我在纸上写了第一行字。我写的是：</p>
 <p><strong>按灰星的历法，今天是第七个月的第一个日头。</strong></p></div>
-<div class="chapter"><h1>第五十章　交接</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-50.jpg" alt="第五十章　交接"/></figure><h1>第五十章　交接</h1>
 <p>我九十六岁那年，把两样东西交了出去。</p>
 <p>第一样，是那本本子。我在上面记了十九年。左边是我们说的，右边是他们回的。</p>
 <p>我把它交出去的时候，接的人叫望。他二十四岁。他是阿岸的儿子。</p>
@@ -6537,7 +6540,7 @@ blockquote p { text-indent: 0; line-height: 2; }
 <p>我说："我在那儿给你们占一个位置。"</p>
 <p>我说："不占也行。"</p>
 <p>我说："那儿有的是地方。"</p></div>
-<div class="chapter"><h1>第五十一章　铭牌</h1>
+<div class="chapter"><figure class="chapter-art"><img src="../插画/章首/chapter-51.jpg" alt="第五十一章　铭牌"/></figure><h1>第五十一章　铭牌</h1>
 <p>那天早上，他们用一张板把我抬到了海边。</p>
 <p>天还没完全亮。海在响。</p>
 <p>那种响我听了五十几年，可每一次到跟前，我都还是要站一会儿才听得清。</p>
